@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¡Bienvenido a AprendeApp!"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="8dp" />
+
+    <!-- Búsqueda -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Buscar por título o tipo"
+        android:iconifiedByDefault="false"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Botones de ordenar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btnSortTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ordenar por título"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnSortType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ordenar por tipo"/>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRecursos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="8dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical" />
+
+    <Button
+        android:id="@+id/btnAddResource"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agregar Recurso"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cerrar sesión"
+        android:layout_marginTop="12dp" />
+</LinearLayout>
+
+
+
+
